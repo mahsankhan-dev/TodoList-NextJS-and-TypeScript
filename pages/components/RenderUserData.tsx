@@ -15,18 +15,15 @@ const RenderUserData: React.FC<userRenderData> = ({
   delList,
   editList,
 }) => {
-  const id = Math.random().toLocaleString();
-  console.log(id);
   return (
     <>
       <div className={styles.list_bar}>
         {todoList.map((item, index) => {
-          console.log("index", id);
           return (
             <>
               <ul>
                 <div className={styles.myList}>
-                  <li key={id}>{item.todoTask}</li>
+                  <li key={index}>{item.todoTask}</li>
                 </div>
                 <div className={styles.buttons}>
                   <button
