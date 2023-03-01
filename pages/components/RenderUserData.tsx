@@ -3,6 +3,7 @@ import styles from "@/styles/Home.module.css";
 import { TODOTASK } from "../interfaces/interface";
 import { BsFillTrashFill } from "react-icons/bs";
 import { AiFillEdit } from "react-icons/ai";
+import Button from "./Button";
 
 interface userRenderData {
   todoList: TODOTASK[];
@@ -26,20 +27,18 @@ const RenderUserData: React.FC<userRenderData> = ({
                   <li key={index}>{item.todoTask}</li>
                 </div>
                 <div className={styles.buttons}>
-                  <button
+                  <Button
                     onClick={() => {
                       delList(item.todoTask);
                     }}
-                  >
-                    <BsFillTrashFill />
-                  </button>
-                  <button
+                    children={<BsFillTrashFill />}
+                  />
+                  <Button
                     onClick={() => {
                       editList(item.todoTask, "This is Edited Value");
                     }}
-                  >
-                    <AiFillEdit />
-                  </button>
+                    children={<AiFillEdit />}
+                  />
                 </div>
               </ul>
             </>

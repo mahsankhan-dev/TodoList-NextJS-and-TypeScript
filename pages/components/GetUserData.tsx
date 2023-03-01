@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "@/styles/Home.module.css";
 import { AiOutlinePlus } from "react-icons/ai";
+import Button from "./Button";
 
 interface getUserDataType {
   input: string;
@@ -22,9 +23,7 @@ const GetUserData: React.FC<getUserDataType> = ({
           value={input}
           onChange={updateInput}
         />
-        <button onClick={addList}>
-          <AiOutlinePlus />
-        </button>
+        <Button onClick={addList} children={<AiOutlinePlus />} />
       </div>
     </>
   );
