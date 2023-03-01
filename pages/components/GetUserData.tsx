@@ -5,7 +5,7 @@ import Button from "./Button";
 
 interface getUserDataType {
   input: string;
-  updateInput: any;
+  updateInput: (...arg: any) => void;
   addList: () => void;
 }
 

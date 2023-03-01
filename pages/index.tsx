@@ -37,7 +37,7 @@ export default function Home() {
 
   const editList = (oldTask: string) => {
     const index = todoList.findIndex((task) => task.todoTask === oldTask);
-    const newValue = prompt("Enter a Edit Value.");
+    const newValue = prompt("Enter a Edit Value.", oldTask);
     if (index >= 0 && newValue !== null && newValue !== "") {
       const updatedList = [...todoList];
       updatedList[index] = { todoTask: newValue };

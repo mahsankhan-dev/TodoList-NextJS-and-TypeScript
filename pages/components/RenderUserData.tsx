@@ -7,8 +7,8 @@ import Button from "./Button";
 
 interface userRenderData {
   todoList: TODOTASK[];
-  delList: any;
-  editList: any;
+  delList: (...arg: any) => void;
+  editList: (...arg: any) => void;
 }
 
 const RenderUserData: React.FC<userRenderData> = ({
